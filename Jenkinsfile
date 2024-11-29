@@ -24,14 +24,14 @@ pipeline {
         stage('Start the program') {
             steps {
                 script {
-                    bat 'start cmd /c "dotnet build"'
+                    bat 'start cmd /c "dotnet build --no-restore"'
                 }
             }
         }
         stage('Run tests') {
             steps {
                 script {
-                    bat 'dotnet test'
+                    bat 'dotnet test --no-build --verbosity normal'
                 }
             }
         }
