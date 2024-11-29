@@ -6,12 +6,12 @@ namespace HouseRentingSystem.Services.Houses.Models
     {
         public int Id { get; init; }
 
-        public string Title { get; init; }
+        public string? Title { get; init; }
 
-        public string Address { get; init; }
+        public string? Address { get; init; }
 
         [DisplayName("Image URL")]
-        public string ImageUrl { get; init; }
+        public string? ImageUrl { get; init; }
 
         [DisplayName("Price Per Month")]
         public decimal PricePerMonth { get; init; }
